@@ -6,7 +6,9 @@ pipelines {
      }
      stages {
         stage ('build') {
+            environment {
             cloud = "GCP"
+            }
             steps {
                 echo "welcome ${name}"
                 echo "you are selected for this ${course}"
