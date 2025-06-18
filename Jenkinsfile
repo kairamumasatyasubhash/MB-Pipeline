@@ -13,6 +13,7 @@ pipeline {
                 echo "welcome ${name}"
                 echo "you are selected for this ${course}"
                 echo "you are selected for ${cloud}"
+                echo "My Branch is ${env.BRANCH_NAME}"
             }
         }
      }
