@@ -1,30 +1,17 @@
-pipeline {
+pipelines {
     agent any
-    stages {
-        stage ('Build') {
+    environment {
+        course = "docker and k8"
+        name ="subhash"
+     }
+     stages {
+        stage ('build') {
+            cloud = "GCP"
             steps {
-                echo " ***** Building The Appliactio*****"
+                echo "welcome ${name}"
+                echo "you are selected for this ${course}"
+                echo "you are selected for ${cloud}"
             }
         }
-        stage ('this is sonar machine') {
-        steps {
-            echo "****Scanning the application"
-        }
-    }
-    stage ('this is for maven machine') {
-    steps {
-        echo "*****Implementinng the Applicaton"
-         }
-       } 
-       stage ('Docker') {
-        steps {
-            echo "*****docker implementing*******"
-         }
-       }
-       stage ('Kubernates') {
-        steps {
-            echo "******implements on kubernates******"
-        }
-       } 
-     } 
-  } 
+     }
+}
