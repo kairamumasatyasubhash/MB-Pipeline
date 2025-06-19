@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-       USER_NAME = 'subhash'
+       Deploy_To = 'subhash'
     }
     stages {
-        stage ('Deploy') {
+        stage ('Build') {
             when {
-                environment name: USER_NAME, value : 'subhash'
+                environment name: Deploy_To, value : 'subhash'
             }
             echo "print the value"
         }
