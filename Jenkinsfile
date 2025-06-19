@@ -1,18 +1,15 @@
-pipeline {
-    agent any
-    environment {
-        DEPLOY_TO = 'production'
+"pipeline {
+   agent any
+   stages {
+    stage ('Build') {
+        steps {
+            echo "Hello subhash"
+        }
     }
-       stages {
-           stage ('ProdDeploy') {
-            when {
-                anyOf {
-                    environment name:'DEPLOY_TO', value :'production'
-            }
-            steps {
-                echo "deploying to production environment"
-             }
-          }
-      }
+    stage ('Secound stage') {
+        steps {
+            echo "secound stage"
+        }
+    }
    }
 }
