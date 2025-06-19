@@ -16,7 +16,8 @@ pipeline {
             }
             steps {
                 echo "deploying to production environment"
-            }
-        }
-    }
+             }
+          }
+      }
+   }
 }
