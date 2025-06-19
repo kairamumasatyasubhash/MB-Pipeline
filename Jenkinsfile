@@ -10,6 +10,7 @@ pipeline {
             }
             steps {
             echo "print the value"
-        }
+             }
+          }
+       }
     }
-}
