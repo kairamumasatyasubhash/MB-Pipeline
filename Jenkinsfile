@@ -6,7 +6,7 @@ pipeline {
                 echo "bulding the code"
             }
         }
-        satge ('parallelscaning') {
+        stage ('parallelscaning') {
             parallel {
                 stage ('code quality') {
                     steps {
