@@ -6,6 +6,8 @@ pipeline {
     stages {
         stage ('ProdDeploy') {
         }
+        steps {
+        echo "deploying to production environment"     
      }
          stage ('ProdDeploy') {
             when {
