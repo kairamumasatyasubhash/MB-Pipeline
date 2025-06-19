@@ -3,14 +3,18 @@ pipeline {
     environment {
         DEPLOY_TO = 'production'
     }
-    stages {
-        stage ('ProdDeploy') {
+    satges {
+        stage ('ProdDeployToDev') {
+            steps {
+                echo "Deploying to dev environment"
+            }
         }
-     }
-         stage ('ProdDeploy') {
+        stage ('ProdDeploy') {
             when {
                 allOf {
+                    branch 'production'
                     environment name:'DEPLOY_TO', value :'production'
+                }
             }
             steps {
                 echo "deploying to production environment"
