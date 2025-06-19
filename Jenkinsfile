@@ -4,9 +4,9 @@ pipeline {
        DEPLOY_TO = 'production'
     }
     stages {
-        stage ('DeployToDev') {
+        stage ('DeployingTodev') {
          }
-            stage ('ProdDeploy') {
+            stage ('ProdDeploying') {
                 when {
                     allOf {
                  branch 'production'
