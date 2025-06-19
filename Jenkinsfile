@@ -8,6 +8,7 @@ pipeline {
             when {
                 environment name: Deploy_To, value : 'subhash'
             }
+            steps {
             echo "print the value"
         }
     }
