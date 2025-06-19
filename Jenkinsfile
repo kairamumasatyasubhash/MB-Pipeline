@@ -4,7 +4,7 @@ pipeline {
        DEPLOY_TO = 'production'
     }
     stages {
-        satge ('DeployToDev') {
+        stage ('DeployToDev') {
             steps {
                 echo "Deploying the environment name"
             }
