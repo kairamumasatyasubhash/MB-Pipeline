@@ -4,7 +4,7 @@ pipeline {
        DEPLOY_TO = 'production'
     }
     stages {
-        satge ('DeployToDev') {
+        stage ('DeployToDev') {
         }
         stage ('ProdDeploy') {
             when {
