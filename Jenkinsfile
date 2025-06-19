@@ -9,7 +9,7 @@ pipeline {
                  echo "deploying the production"
             }
          }
-         stages{
+         stages {
             stage ('DeplotToDev') {
                 when {
                     allOf {
