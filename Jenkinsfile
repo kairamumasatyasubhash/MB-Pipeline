@@ -3,28 +3,22 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                echo " ***** Building The Appliactio*****"
+                echo "bulding the code"
             }
         }
-        stage ('this is sonar machine') {
-        steps {
-            echo "****Scanning the application"
+        satge ('parallelscaning') {
+            parallel {
+                stage ('code quality') {
+                    steps {
+                        echo "checking the code quality of the machine"
+                    }
+                }
+                stage ('securesystem') {
+                    steps {
+                        echo "secureing the system"
+                    }
+                }
+            }
         }
     }
-    stage ('this is for maven machine') {
-    steps {
-        echo "*****Implementinng the Applicaton"
-         }
-       } 
-       stage ('Docker') {
-        steps {
-            echo "*****docker implementing*******"
-         }
-       }
-       stage ('Kubernates') {
-        steps {
-            echo "******implements on kubernates******"
-        }
-       } 
-     } 
-  } 
+}
