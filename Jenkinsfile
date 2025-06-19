@@ -5,11 +5,7 @@ pipeline {
     }
     stages {
         stage ('ProdDeployToDev') {
-            steps {
-                 echo "deploying the production"
-            }
          }
-         stages {
             stage ('DeplotToDev') {
                 when {
                     allOf {
