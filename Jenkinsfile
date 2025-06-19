@@ -1,16 +1,18 @@
 pipeline {
     agent any
     environment {
-       Deploy_To = 'subhash'
+        DEPLOY_TO = 'production'
     }
     stages {
-        stage ('Build') {
+        stage ('ProdDeploy') {
             when {
-                environment name: Deploy_To, value : 'subhash'
+                not {
+                    equal excepted :Prod, actual :"${ DEPLOY_TO}"
+                }
             }
             steps {
-            echo "print the subhash"
-             }
-          }
-       }
+                echo "Deploy production"
+            }
+        }
     }
+}
