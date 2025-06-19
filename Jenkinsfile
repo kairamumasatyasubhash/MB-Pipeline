@@ -4,13 +4,13 @@ pipeline {
        DEPLOY_TO = 'production'
     }
     stages {
-        stage ('DeployToDev') {
+        stage ('ProdDeployToDev') {
          }
-            stage ('ProdDeploy') {
+            stage ('DeplotToDev') {
                 when {
                     allOf {
                  branch 'production'
-                 environment name:'DEPLOY_TO',  value:'production'                  }
+                 environment name:'DEPLOY_TO',  value:'production'
                 }
             }
             steps {
@@ -18,3 +18,4 @@ pipeline {
             }
          }
     }
+}
