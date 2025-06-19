@@ -4,7 +4,7 @@ pipeline {
        USER_NAME = 'subhash'
     }
     stages {
-        stage ('DEPLOYING') {
+        stage ('Deploy') {
             when {
                 environment name: USER_NAME, value : 'subhash'
             }
