@@ -9,7 +9,7 @@ pipeline {
                 environment name: Deploy_To, value : 'subhash'
             }
             steps {
-            echo "print the value"
+            echo "print the subhash"
              }
           }
        }
