@@ -34,7 +34,7 @@ pipeline {
       }
       stage ('Branch') {
         when {
-            branch 'samsung/*'
+            branch 'samsung*'
         }
         steps {
         echo "addind branch"
