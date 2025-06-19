@@ -3,7 +3,7 @@ pipeline {
     environment {
         DEPLOY_TO = 'production'
     }
-    satges {
+    stages {
         stage ('ProdDeployToDev') {
             steps {
                 echo "Deploying to dev environment"
