@@ -5,6 +5,9 @@ pipeline {
     }
     stages {
         stage ('ProdDeployToDev') {
+            steps {
+                echo "Deploy to dev environment"
+            }]
          }
             stage ('DeplotToDev') {
                 when {
@@ -18,3 +21,4 @@ pipeline {
             }
          }
     }
+}
