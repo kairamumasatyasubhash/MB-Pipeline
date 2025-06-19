@@ -7,7 +7,7 @@ pipeline {
         stage ('ProdDeploy') {
             when {
                 not {
-                    equal excepted :Prod, actual :"${ DEPLOY_TO}"
+                    equals excepted :"Prod", actual :"${DEPLOY_TO}"
                 }
             }
             steps {
