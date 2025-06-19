@@ -1,24 +1,25 @@
 pipeline {
     agent any
     environment {
-        DEPLOY_TO = 'production'
+       DEPLOY_TO = 'production'
     }
     stages {
         stage ('ProdDeployToDev') {
             steps {
-                echo "Deploying to dev environment"
+                 echo "deploying the production"
             }
-        }
-        stage ('ProdDeploy') {
-            when {
-                allOf {
-                    branch 'production'
-                    environment name:'DEPLOY_TO', value :'production'
+         }
+         stages{
+            stage ('DeplotToDev') {
+                when {
+                    allOf {
+                 barnch 'production'
+                 environment name:'DEPLOY_TO',  value:'production'                  }
                 }
             }
             steps {
-                echo "deploying to production environment"
+                echo "deploying the production environment"
             }
-        }
+         }
     }
 }
