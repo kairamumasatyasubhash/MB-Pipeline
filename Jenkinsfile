@@ -20,5 +20,5 @@ pipeline {
                 echo "deploying environment production"
             }
         }
-    }
-}
+     }
+ }
