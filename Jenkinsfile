@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('DeployToDev') {
          }
-            stage ('ProdDeployT') {
+            stage ('ProdDeploy') {
                 when {
                     allOf {
                  branch 'production'
