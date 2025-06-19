@@ -9,7 +9,7 @@ pipeline {
      }
          stage ('ProdDeploy') {
             when {
-                allOf {
+                anyOf {
                     environment name:'DEPLOY_TO', value :'production'
             }
             steps {
