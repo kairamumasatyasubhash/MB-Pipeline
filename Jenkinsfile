@@ -11,14 +11,14 @@ pipeline{
         }
         stage ('SubhashKairam') {
             when {
-                allOf{
+                anyOf{
                     branch 'subhash'
-                    environment name:'USER_NAME', value:'subhash'
+                    environment name:'USER_NAME', value:'subbu'
                 }
             }
             steps {
                 echo "kairam uma satya subhash"
             }
         }
-    }
+    } 
 }
