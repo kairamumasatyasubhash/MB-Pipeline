@@ -1,6 +1,6 @@
 pipeline {
-agent any
-parameters {
+    agent any
+    parameters {
     choice(name: 'subhash',
     choices: 'yes/no',
     description: "select yes or no"
@@ -17,7 +17,7 @@ parameters {
     choices: 'yes/no',
     description: "select yes or no"
     ) 
-stages {
+    stages {
         stage ('UserSelection') {
             steps {
                 echo "Please select your name"
@@ -76,5 +76,3 @@ stages {
        }
     }
 }
-
-
