@@ -1,4 +1,4 @@
-pipeline
+pipeline {
 agent any
 parameters {
     choice(name: 'subhash',
@@ -72,6 +72,8 @@ parameters {
         }
         steps {
             echo "Please select your name"
-        }
+          }
+       }
     }
 }
+
