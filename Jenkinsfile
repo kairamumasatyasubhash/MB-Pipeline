@@ -2,19 +2,19 @@ pipeline
 agent any
 parameters {
     choice(name: 'subhash'
-    choices: yes/no
+    choices: 'yes/no'
     description: 'select yes or no'
     )
     choice(name: 'kairam'
-    choices:yes/no
+    choices:'yes/no'
     description: 'select yes or no'
     )
     choice(name: 'umasatya'
-    choices:yes/no
+    choices:'yes/no'
     description: 'select yes or no'
     )
     choice(name: 'subbu'
-    choices:yes/no
+    choices:'yes/no'
     description: 'select yes or no'
     ) 
         stages {
