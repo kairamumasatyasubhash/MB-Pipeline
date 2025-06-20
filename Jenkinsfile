@@ -1,20 +1,28 @@
 pipeline {
     agent any
-    parameter {
-        string(Name:'person', defaultValue:'subhash', decription:'my name is subhash')
-        text(Name:'kairam', defaultVaule:'', decription:'text me subhashkairam')
-        booleanParam(Name:'umasatya', defaultValue:'true', decription :'this is ture')
-        choice(Name:'CHOOICE', defaultValue: ['one','two','three'] decription :'pick something')
-        password(Name:'PASSWORD'defaultValue:'SECRETE',decription: 'enter password')
+    parameter {       
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     stages {
         stage('example') {
             steps {
-            echo "Hello ${params.person}"
-            echo "kairam:${perams.kairam}"
-            echo "umasatya:${params.kairam}"
-            echo "SELECTED Choice is :${params.CHOICE}"
-            echo "Password entered is : ${params.PASSWORD}"
+                echo "Hello ${params.PERSON}"
+
+                echo "Biography: ${params.BIOGRAPHY}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"
+
+                echo "Password: ${params.PASSWORD}"
          }
       }
    }
