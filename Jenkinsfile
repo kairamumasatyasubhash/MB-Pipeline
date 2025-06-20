@@ -18,18 +18,18 @@ pipeline {
     description: "select yes or no"
     ) 
     stages {
-        stage ('UserSelection') {
+       stage ('UserSelection') {
             steps {
                 echo "Please select your name"
             }
         }
     } 
-    stage ('UserChoice') {
+       stage ('UserChoice') {
         steps {
             echo "Please select your choice"
         }
     }
-    stage ('UserName') {
+       stage ('UserName') {
         when {
             allOf {
                 branch 'subhash'
@@ -40,7 +40,7 @@ pipeline {
             echo "Please select your name"
         }
     }
-    stage ('UserChoice') {
+      stage ('UserChoice') {
         when {
             allOf {
                 branch 'kairam'
@@ -57,7 +57,7 @@ pipeline {
             echo "Please select your choice"
         }
     }
-    stage ('UserName') {
+       stage ('UserName') {
         when {
             allOf {
                 branch 'subhash'
@@ -70,9 +70,10 @@ pipeline {
                 environment name: 'USER_NAME', value: 'umasatya'
             }
         }
-        steps {
+      steps {
             echo "Please select your name"
           }
        }
     }
 }
+
