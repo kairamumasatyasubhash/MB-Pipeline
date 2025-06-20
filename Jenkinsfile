@@ -17,7 +17,7 @@ parameters {
     choices: 'yes/no',
     description: "select yes or no"
     ) 
-        stages {
+stages {
         stage ('UserSelection') {
             steps {
                 echo "Please select your name"
@@ -76,4 +76,5 @@ parameters {
        }
     }
 }
+
 
