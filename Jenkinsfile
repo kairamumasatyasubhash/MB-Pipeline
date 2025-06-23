@@ -8,7 +8,7 @@ pipeline {
         }
     }
     post {
-        sucess {
+        success {
             echo "Build completed successfully!"
         }
         failure {
